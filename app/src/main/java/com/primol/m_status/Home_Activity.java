@@ -37,6 +37,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.codemybrainsout.ratingdialog.RatingDialog;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -67,9 +68,21 @@ public class Home_Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_);
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        final RatingDialog ratingDialog = new RatingDialog.Builder(this)
+                .threshold(3)
+                .session(5)
+                .onRatingBarFormSumbit(new RatingDialog.RatingDialogFormListener() {
+                    @Override
+                    public void onFormSubmitted(String feedback) {
+
+                    }
+                }).build();
+
+        ratingDialog.show();
+
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-3629419195739803~4843984776");
 
 
@@ -291,7 +304,7 @@ public class Home_Activity extends AppCompatActivity
         } else if (id == R.id.nav_moreapps) {
 
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("market://search?q=pub:<primol>"));
+            intent.setData(Uri.parse("market://search?q=pub:PriMol"));
           //  intent.setData(Uri.parse("market://details?id=com.example.android"));
             // http://play.google.com/store/search?q=pub:<publisher_name>
             startActivity(intent);
@@ -299,7 +312,19 @@ public class Home_Activity extends AppCompatActivity
             // https://developer.android.com/distribute/tools/promote/linking.html#OpeningPublisher
         } else if (id == R.id.nav_rateus) {
 
-            startActivity(new Intent(Intent.ACTION_VIEW,  Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
+            // https://android-arsenal.com/details/1/4612 link to rate us library
+            final RatingDialog ratingDialog = new RatingDialog.Builder(this)
+                    .threshold(3)
+                    .onRatingBarFormSumbit(new RatingDialog.RatingDialogFormListener() {
+                        @Override
+                        public void onFormSubmitted(String feedback) {
+
+                        }
+                    }).build();
+
+            ratingDialog.show();
+
+         //   startActivity(new Intent(Intent.ACTION_VIEW,  Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
