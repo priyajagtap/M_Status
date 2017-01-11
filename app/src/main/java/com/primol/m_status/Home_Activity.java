@@ -49,6 +49,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import angtrim.com.fivestarslibrary.FiveStarsDialog;
+import angtrim.com.fivestarslibrary.NegativeReviewListener;
+import angtrim.com.fivestarslibrary.ReviewListener;
 
 // import static com.primol.m_status.MainActivity.md5;
 
@@ -70,6 +72,7 @@ public class Home_Activity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -288,6 +291,7 @@ public class Home_Activity extends AppCompatActivity
             startActivity(Intent.createChooser(share, "Share With..."));
 
         } else if (id == R.id.nav_aboutus) {
+
             Intent aboutus_activity = new Intent(Home_Activity.this,AboutUs_Activity.class);
             startActivity(aboutus_activity);
         } else if (id == R.id.nav_moreapps) {
@@ -300,6 +304,7 @@ public class Home_Activity extends AppCompatActivity
 // https://developer.android.com/distribute/tools/promote/linking.html#UriSummary
             // https://developer.android.com/distribute/tools/promote/linking.html#OpeningPublisher
         } else if (id == R.id.nav_rateus) {
+
             startActivity(new Intent(Intent.ACTION_VIEW,  Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

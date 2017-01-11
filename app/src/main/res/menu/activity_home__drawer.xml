@@ -17,11 +17,7 @@
                 android:id="@+id/nav_rateus"
                 android:icon="@drawable/rateus_icon"
                 android:title="Rate Us" />
-        </menu>
-    </item>
 
-    <item android:title="Communicate">
-        <menu>
             <item
                 android:id="@+id/nav_reportbug"
                 android:icon="@drawable/bug_iconn"
