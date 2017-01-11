@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "380507280283",
+    "firebase_url": "https://marathi-status-app.firebaseio.com",
+    "project_id": "marathi-status-app",
+    "storage_bucket": "marathi-status-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380507280283:android:a523d17c84c54415",
+        "android_client_info": {
+          "package_name": "com.primol.m_status"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380507280283-qo67lvadu6sbmnu379hl38liho3kdj4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.primol.m_status",
+            "certificate_hash": "56A35703CB7242FD80B4EB453477453F2A12EE4F"
+          }
+        },
+        {
+          "client_id": "380507280283-of3nnk9uavh1bpcc0ilego53pfjd5rhr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKLth6dRmjqnHseZY2Pd_LKq0VFsMx280"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

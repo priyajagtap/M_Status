@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+    </group>-->
+    <item android:title="Home">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/home_icon"
+                android:title="Home" />
+            <item
+                android:id="@+id/nav_rateus"
+                android:icon="@drawable/rateus_icon"
+                android:title="Rate Us" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_reportbug"
+                android:icon="@drawable/bug_iconn"
+                android:title="Report Bug" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/new_share_icon"
+                android:title="Share App" />
+            <item
+                android:id="@+id/nav_moreapps"
+                android:icon="@drawable/new_moreapps"
+                android:title="More Apps" />
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/aboutus"
+                android:title="About Us" />
+        </menu>
+    </item>
+
+</menu>
