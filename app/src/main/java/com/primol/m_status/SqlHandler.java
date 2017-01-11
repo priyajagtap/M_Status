@@ -52,6 +52,4 @@ public class SqlHandler {
         }
         return c1;
     }
-
-
 }

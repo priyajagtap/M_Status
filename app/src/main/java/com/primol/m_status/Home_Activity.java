@@ -116,17 +116,6 @@ public class Home_Activity extends AppCompatActivity
 
         requestNewInterstitial();
 
-
-
-/*        // Obtain the FirebaseAnalytics instance.
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-
-        Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
-        */
         sql_handler_obj = new SqlHandler(getApplicationContext());
         addListenerOnButton();
 
@@ -148,16 +137,6 @@ public class Home_Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-       /* // rate us
-        FiveStarsDialog fiveStarsDialog = new FiveStarsDialog(this,"angelo.gallarello@gmail.com");
-        fiveStarsDialog.setRateText("Your custom text")
-                .setTitle("Your custom title")
-                .setForceMode(false)
-                .setUpperBound(2) // Market opened if a rating >= 2 is selected
-                .setNegativeReviewListener(Home_Activity.this) // OVERRIDE mail intent for negative review
-                .setReviewListener(this) // Used to listen for reviews (if you want to track them )
-                .showAfter(0);
-        // rate us finish*/
     }
 
     private void requestNewInterstitial() {
@@ -255,12 +234,8 @@ public class Home_Activity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_aboutus) {
             Intent aboutus_activity = new Intent(Home_Activity.this,AboutUs_Activity.class);
             startActivity(aboutus_activity);
@@ -273,7 +248,7 @@ public class Home_Activity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
@@ -305,10 +280,10 @@ public class Home_Activity extends AppCompatActivity
 
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://search?q=pub:PriMol"));
-          //  intent.setData(Uri.parse("market://details?id=com.example.android"));
+            //  intent.setData(Uri.parse("market://details?id=com.example.android"));
             // http://play.google.com/store/search?q=pub:<publisher_name>
             startActivity(intent);
-// https://developer.android.com/distribute/tools/promote/linking.html#UriSummary
+            // https://developer.android.com/distribute/tools/promote/linking.html#UriSummary
             // https://developer.android.com/distribute/tools/promote/linking.html#OpeningPublisher
         } else if (id == R.id.nav_rateus) {
 
@@ -323,8 +298,6 @@ public class Home_Activity extends AppCompatActivity
                     }).build();
 
             ratingDialog.show();
-
-         //   startActivity(new Intent(Intent.ACTION_VIEW,  Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
