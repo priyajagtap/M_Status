@@ -10,6 +10,13 @@ App ID: ca-app-pub-3629419195739803~4843984776
 
          SHA1: "56a35703cb7242fd80b4eb453477453f2a12ee4f"
 
+native ad :-
+
+App ID: ca-app-pub-3629419195739803~4843984776
+Ad unit ID: ca-app-pub-3629419195739803/7126139970
+Native ad template: M002
+Width: 280–1200 dp
+Height: 132–1200 dp
         */
 
 
@@ -220,7 +227,19 @@ public class Home_Activity extends AppCompatActivity
                         }
 
                     })
-                    .setNegativeButton("No", null)
+                    .setNegativeButton("No", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Log.i("TestAd",mInterstitialAd.isLoaded()+"");
+                            if (mInterstitialAd.isLoaded()) {
+                                mInterstitialAd.show();
+                            } else {
+                                Intent home = new Intent(Home_Activity.this,Home_Activity.class);
+                                startActivity(home);
+                            }
+                        }
+                    })
                     .show();
         }
     }
