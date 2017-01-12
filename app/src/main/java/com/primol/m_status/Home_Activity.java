@@ -58,7 +58,7 @@ import java.util.ArrayList;
 
 public class Home_Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private FirebaseAnalytics mFirebaseAnalytics;
+
     static View.OnClickListener myOnClickListener;
     public static ArrayList<id_name_model> ar = new ArrayList<id_name_model>();
     SqlHandler sql_handler_obj;
@@ -214,11 +214,10 @@ public class Home_Activity extends AppCompatActivity
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("Exit App")
                     .setMessage("Are you sure you want to exit from this app?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener()
-                    {
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Log.i("TestAd",mInterstitialAd.isLoaded()+"");
+                            Log.i("TestAd", mInterstitialAd.isLoaded() + "");
                             if (mInterstitialAd.isLoaded()) {
                                 mInterstitialAd.show();
                             } else {
@@ -227,19 +226,7 @@ public class Home_Activity extends AppCompatActivity
                         }
 
                     })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener()
-                    {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Log.i("TestAd",mInterstitialAd.isLoaded()+"");
-                            if (mInterstitialAd.isLoaded()) {
-                                mInterstitialAd.show();
-                            } else {
-                                Intent home = new Intent(Home_Activity.this,Home_Activity.class);
-                                startActivity(home);
-                            }
-                        }
-                    })
+                    .setNegativeButton("No", null)
                     .show();
         }
     }
