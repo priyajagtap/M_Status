@@ -43,12 +43,12 @@ public class AboutUs_Activity extends AppCompatActivity {
         fbpage.setMovementMethod(LinkMovementMethod.getInstance());
         fbpage.setText(Text);
 
-        twitterpage = (TextView)findViewById(R.id.link_twitter_tv);
+   /*     twitterpage = (TextView)findViewById(R.id.link_twitter_tv);
 
         Spanned Text2 = Html.fromHtml("<a href='http://www.google.com//'>आमचे Twitter पेज</a>");
 
         twitterpage.setMovementMethod(LinkMovementMethod.getInstance());
-        twitterpage.setText(Text2);
+        twitterpage.setText(Text2);*/
 
   /*      linkedinpage = (TextView)findViewById(R.id.link_linkedin_tv);
 
@@ -57,12 +57,12 @@ public class AboutUs_Activity extends AppCompatActivity {
         linkedinpage.setMovementMethod(LinkMovementMethod.getInstance());
         linkedinpage.setText(Text3);*/
 
-        instagrampage = (TextView)findViewById(R.id.link_instagram_tv);
+    /*    instagrampage = (TextView)findViewById(R.id.link_instagram_tv);
 
         Spanned Text4 = Html.fromHtml("<a href='http://www.google.com//'>आमचे Instagram पेज</a>");
 
         instagrampage.setMovementMethod(LinkMovementMethod.getInstance());
-        instagrampage.setText(Text4);
+        instagrampage.setText(Text4);*/
     }
 }/*
 
