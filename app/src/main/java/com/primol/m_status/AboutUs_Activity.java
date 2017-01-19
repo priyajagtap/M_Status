@@ -36,13 +36,13 @@ public class AboutUs_Activity extends AppCompatActivity {
         AdRequest adRequestbtm = new AdRequest.Builder().build();
         adviewbtm.loadAd(adRequestbtm);
 
-        fbpage = (TextView)findViewById(R.id.link_fb_tv);
+       /* fbpage = (TextView)findViewById(R.id.link_fb_tv);
 
         Spanned Text = Html.fromHtml("<a href='http://www.google.com//'>आमचे Facebook पेज</a>");
 
         fbpage.setMovementMethod(LinkMovementMethod.getInstance());
         fbpage.setText(Text);
-
+*/
    /*     twitterpage = (TextView)findViewById(R.id.link_twitter_tv);
 
         Spanned Text2 = Html.fromHtml("<a href='http://www.google.com//'>आमचे Twitter पेज</a>");

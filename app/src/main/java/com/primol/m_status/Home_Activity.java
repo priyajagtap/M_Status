@@ -21,6 +21,7 @@ Height: 132–1200 dp
         */
 
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -267,8 +268,8 @@ public class Home_Activity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-            String message = "Primol - Marathi Status App offer – Get a surprise on download" +
-                    "Download Primol - Marathi Status App from Google Play Via :  ";
+            String message =
+                    "Download this amazing \"PriMol - Marathi Status App\" from Google Play Via : https://play.google.com/store/apps/details?id="+ this.getPackageName();
             Intent share = new Intent(Intent.ACTION_SEND);
             share.setType("text/plain");
             share.putExtra(Intent.EXTRA_TEXT, message);
